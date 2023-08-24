@@ -90,9 +90,14 @@ header{
 
 .titulo-producto-carrito{
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
 }
 
 .precio-producto-carrito{
+    display: flex;
+    justify-content: space-between;
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
@@ -101,6 +106,16 @@ header{
 .cantidad-producto-carrito{
     font-weight: 400;
     font-size: 20px;
+}
+
+.imagen-producto-carrito {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
 }
 
 .icon-close{
