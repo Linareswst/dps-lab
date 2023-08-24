@@ -171,14 +171,30 @@ header{
   align-items: center;
   outline: none;
   border-radius: 5px;
-  border: 2px solid #212529;
-  background: #212529;
+  border: 1px solid #212529;
+  background: #000;
 
 }
 
 .btn-clear-all:hover {
   background: #fff;
-  color: #212529
+  color: #000
+}
+
+.btn-add-cart {
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 20px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  background: #000;
+}
+
+.btn-add-cart:hover {
+    background: #fff;
+    color: #212529;
+    border: 1px solid #000;
 }
 
 
