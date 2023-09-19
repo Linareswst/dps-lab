@@ -6,16 +6,19 @@ const DATA = [
   {
     id: '1',
     title: 'Pupusas',
+    description: 'Lorem ipsum asasasasas',
     src:require('./src/img/pupusas.jpg')
   },
   {
     id: '2',
     title: 'Riguas',
+    description: 'Lorem ipsum asasasasas',
     src:require('./src/img/riguas.jpg')
   },
   {
     id: '3',
     title: 'Chilate',
+    description: 'Lorem ipsum asasasasas',
     src:require('./src/img/chilate.jpg')
   },
 ];
@@ -24,19 +27,20 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Card>
-          <Card.Title style={styles.titlemain}>Comidas Tipicas El Salvador</Card.Title>
-          <Card.Divider/>
+          <Text style={styles.titlemain}>Comidas Tipicas El Salvador</Text>
+      </View>
           {DATA.map((d, i) => {
             return (
-                <Card key={i} style={styles.data}>
-                <Card.Title style={styles.titledata}>{d.title}</Card.Title>
-                <Card.Image style={styles.imgdata} source={d.src}/>
-                </Card>
+                <View style={styles.datacontainer}>
+                  <Card key={i} style={styles.data}>
+                    <Card.Title style={styles.titledata}>{d.title}</Card.Title>
+                    <Text style={styles.descdata}>{d.description}</Text>
+                    <Card.Image style={styles.imgdata} source={d.src}/>
+                  </Card>
+                </View>
             );
           })}
-        </Card>
-      </View>
+      
     </ScrollView>
   );
 }
@@ -44,18 +48,29 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
+    backgroundColor: 'grey',
+    height: 140,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   titlemain: {
-    fontSize: 30,
-    backgroundColor: 'grey'
+    marginTop: 30,
+    fontSize: 28,
+    backgroundColor: 'darkgrey',
+    color: 'black',
+    borderRadius: 5
+  },
+  datacontainer: {
+
   },
   data: {
-
+    
   },
   titledata: {
     fontSize: 25,
     justifyContent: 'space-between',
-    paddingLeft: 60
+    paddingLeft: 60,
   },
   imgdata: {
     width: 125,
@@ -63,5 +78,4 @@ const styles = StyleSheet.create({
     borderRadius: 400/2,
     justifyContent: 'space-between'
   },
-
 });
